@@ -1,11 +1,46 @@
 [image1]: MPC.png
 
-# Term2_CarND_MPC
+# Term2_CarND_MPC: Model Predictive Control
 Self-Driving Car Engineer Nanodegree Program
 
 ![MPC][image1] 
 
----
+## Introduction
+In this project, the Model Predictive Control (MPC) is utilized for vehicle path following purpose. The control signals for controlling the vehicle trajectory are the steering angle (delta) and throttle acceleration (a). Both control signals are derived from the optimization of designed cost function, which includes the penalty from cross-track error (cte), steering angle error, tracking speed error, and control signals. In additions, the state and control input constraints are also added during the optimization process as well. After several tunings, the time horizon of 10 samples ahead with sampling time of 0.1 are set for MPC solver. 
+
+In order to implement MPC in this project, C++ is utilized. Both IPOPT and CPPAD libraries are used for optimization of control law. The MPC is successfully implemented so that the vehicle can stay on track and follow the path smoothly. 
+
+## Vehicle State
+
+
+
+## Vehicle Kinematics Model
+
+
+
+## Cost Function
+
+
+## Fitting Polynomials
+
+
+## Finding N and dt 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------
 
 ## Dependencies
 
