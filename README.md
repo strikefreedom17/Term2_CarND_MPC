@@ -1,5 +1,9 @@
+[image1]: MPC.png
+
 # Term2_CarND_MPC
 Self-Driving Car Engineer Nanodegree Program
+
+![MPC][image1] 
 
 ---
 
