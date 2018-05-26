@@ -54,10 +54,12 @@ The cost function of MPC is described in MPC.cpp line 62-82. The first part of t
 
 
 
-## Fitting Polynomials
+## Waypoints Polynomial Fit and Preprocessing
+The waypoints polynomial fit is described in main.cpp line 44-62, followed the example in CarND-MPC-Quizzes/polyfit. The fd 3rd order polynomial is utilized in this project.
 
 
 ## Finding N and dt 
+N is the future time horizon used in MPC and dt is sampling time. Large N implies the longer period of time for path prediction as well as control policy. Finding the right N and dt is an art of MPC design. In this project, I found that N=10 and dt=0.1s are good values so that the vehicle path following using MPC is acheived. Other values of N and dt are N=20,dt=0.1s, for example. In this case, the number of future steps are too much and the optimal control policy is not quite well derived. There are other set of N and dt such (N=10, dt=0.05s), (N=20, dt=0.01s), etc. 
 
 
 ## MPC with Latency
