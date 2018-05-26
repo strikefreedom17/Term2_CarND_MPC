@@ -55,7 +55,7 @@ The cost function of MPC is described in MPC.cpp line 62-82. The first part of t
 
 
 ## Waypoints Polynomial Fit and Preprocessing
-The waypoints polynomial fit is described in main.cpp line 44-62, followed the example in CarND-MPC-Quizzes/polyfit. The fd 3rd order polynomial is utilized in this project.
+The waypoints polynomial fit is described in main.cpp line 44-62, followed the example in CarND-MPC-Quizzes/polyfit. The fd 3rd order polynomial is utilized in this project. Note that the transformation between global and car coordinates are applied (line 110-118) before applying the polynomial fit section (line 122).
 
 
 ## Finding N and dt 
@@ -63,22 +63,12 @@ N is the future time horizon used in MPC and dt is sampling time. Large N implie
 
 
 ## MPC with Latency
-
-
-
-
-
-
-
-
-
-
-
-
+Without taking into account of latency of 100 ms, I found that the MPC tracking performance does not preform well, particularly when the vehicle is enterring the corner which there is often a large cte (large overshoot). When 100 ms is also considered by updating the vehicle kinematics model with this 100 ms and then solve for MPC control policy, the vehicle tracking performance is much better. The code that describes this part is given in main.cpp line 125-149.
 
 
 
 ----------------------------------------------------------------------------------------------------------
+## Original Guidelines
 
 ## Dependencies
 
