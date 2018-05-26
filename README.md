@@ -50,12 +50,17 @@ epsi[t] = psi[t-1] - psides[t-1] + v[t-1] * delta[t-1] / Lf * dt
 
 
 ## Cost Function
+The cost function of MPC is described in MPC.cpp line 62-82. The first part of the cost function includes the penalty between desired cte (=0) vs actual cte, desired epsi (=0) vs actual epsi, and desired velocity vs actual velocity. The second part of the cost function also adds the contribution from control inputs: delta and a terms. And the last part describes the rate of change of both control inputs, implying the smoothness of control signal change. There are several gains added in the cost function and these gains are introduced by trials and errors so that the vehicle tracking response is minimized and smooth.
+
 
 
 ## Fitting Polynomials
 
 
 ## Finding N and dt 
+
+
+## MPC with Latency
 
 
 
