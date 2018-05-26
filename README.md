@@ -11,6 +11,12 @@ In this project, the Model Predictive Control (MPC) is utilized for vehicle path
 In order to implement MPC in this project, C++ is utilized. Both IPOPT and CPPAD libraries are used for optimization of control law. The MPC is successfully implemented so that the vehicle can stay on track and follow the path smoothly. 
 
 ## Vehicle State
+x: vehicle position in forward direction
+y: vehicle position in lateral direction
+psi: yaw (steering) angle
+v: velocity of vehicle
+cte: cross-track error
+epsi: steering angle error
 
 
 
