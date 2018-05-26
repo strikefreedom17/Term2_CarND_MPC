@@ -25,8 +25,27 @@ cte: cross-track error
 epsi: steering angle error
 
 
+Control Inputs are:
+
+delta: steering angle
+
+a: throttle acceleration
+
 
 ## Vehicle Kinematics Model
+The vehicle kinematics model is given by:
+
+x[t] = x[t-1] + v[t-1] * cos(psi[t-1]) * dt
+
+y[t] = y[t-1] + v[t-1] * sin(psi[t-1]) * dt
+
+psi[t] = psi[t-1] + v[t-1] * delta[t-1] / Lf * dt
+
+v[t] = v[t-1] + a[t-1] * dt
+
+cte[t] = f(x[t-1]) - y[t-1] + v[t-1] * sin(epsi[t-1]) * dt
+
+epsi[t] = psi[t-1] - psides[t-1] + v[t-1] * delta[t-1] / Lf * dt
 
 
 
